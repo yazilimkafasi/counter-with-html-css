@@ -1,0 +1,90 @@
+html {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    background: black;
+}
+
+.tap {
+    width: 20vw;
+    height: 20vw;
+    border: 10px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 2rem white, inset 0 0 1rem white;
+    cursor: pointer;
+    font-size: 8vw;
+    line-height: calc(20vw - 10px);
+    text-align: center;
+    font-family: monospace;
+    color: white;
+    text-shadow: 0 0 25px white;
+    user-select: none;
+    transition: 150ms;
+    box-sizing: border-box;
+}
+
+.down {
+    transform: scale(1.04);
+}
+
+.b {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-width: 5px;
+    border-style: solid;
+    position: absolute;
+    pointer-events: none;
+}
+
+.top {
+    top: -75px;
+    animation: top 1s linear forwards;
+}
+
+@keyframes top {
+    100% {
+        top: 110%;
+        opacity: 0;
+    }
+}
+
+.bottom {
+    top: 100%;
+    animation: bottom 1s linear forwards;
+}
+
+@keyframes bottom {
+    100% {
+        top: -75px;
+        opacity: 0;
+    }
+}
+
+.left {
+    left: -75px;
+    animation: left 1s linear forwards;
+}
+
+@keyframes left {
+    100% {
+        left: 110%;
+        opacity: 0;
+    }
+}
+
+.right {
+    left: 100%;
+    animation: right 1s linear forwards;
+}
+
+@keyframes right {
+    100% {
+        left: -75px;
+        opacity: 0;
+    }
+}
